@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/output.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-chubby/css/uicons-regular-chubby.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <title>LUMIATECH</title>
+</head>
+
+<body
+    class="overflow-x-hidden relative dark:bg-dark-page-color bg-page-color text-black dark:text-[#ffffffb3] dark duration-150">
+    <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden">
+    </div>
+    <div
+        class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color text-white">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </div>
+    <header class="fixed w-full top-0 left-0 duration-80 z-9999">
+        <div class="container py-5 flex items-center justify-between duration-80 text-[16px]">
+            <a href="index.html" aria-label="Home" class="w-30 sm:w-40 lg:w-43">
+                <img class="logo w-full" src="images/logo/logo.webp" alt="">
+            </a>
+            <nav
+                class="z-999 py-4 duration-350 max-lg:flex max-lg:flex-col max-lg:justify-between max-lg:absolute max-lg:-left-full max-lg:top-0 max-lg:w-[70%] max-lg:h-screen max-lg:px-6 max-lg:py-10 max-lg:rounded max-lg:shadow-md max-lg:dark:bg-dark-alt-color max-lg:bg-gray-200">
+                <div
+                    class="nav flex items-center space-x-8 xl:space-x-12 max-lg:space-y-5 max-lg:flex-col max-lg:items-start">
+                    <img class="logo w-[150px] mb-20 ml-6 lg:hidden" src="images/logo/logo.webp" alt="">
+                    <a href="index.html#home">Accueil</a>
+                    <a href="index.html#about">Á propos de nous</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a class="active" href="contact.html">Contact</a>
+                </div>
+                <div class="menu-icons flex-center gap-x-6 border-t border-main-text/70 pt-8 lg:hidden">
+                    <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </div>
+            </nav>
+            <div class="icons flex-center gap-x-2 lg:gap-x-4">
+                <i
+                    class="burger fi fi-rr-menu-burger text-2xl translate-y-1 tb:translate-y-[1.55px] cursor-pointer burger lg:hidden"></i>
+                <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <ion-icon name="logo-linkedin"
+                        class=" border-r dark:border-[#ffffffb3] border-black pr-2 lg:pr-4"></ion-icon>
+                </a>
+                <i class="theme fi fi-rc-moon max-tb:translate-y-[4px] max-lg:translate-y-[2px] text-[23px]"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main
+        class="overflow-hidden p-0! pt-24! relative min-h-screen max-[575px]:pt-[150px]! bg-linear-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <section id="contact-hero" class="flex-center flex-col pb-12 pt-16 md:pt-20 md:pb-20 xl:pt-24 xl:pb-24 w-full">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div
+                        class="inline-flex items-center px-4 py-2 bg-main-bg-color text-main-color rounded-full text-sm font-medium mb-6">
+                        Discutons de votre projet
+                    </div>
+
+                    <h2
+                        class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold leading-tight!">
+                        Contactez notre <span
+                            class="bg-linear-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">équipe
+                            d'experts</span></h2>
+
+                    <p
+                        class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        Prêt à transformer votre vision en réalité digitale ? Notre équipe d'experts vous accompagne
+                        dans chaque étape de votre projet technologique.
+                    </p>
+                </div>
+        </section>
+
+        <!-- Main Contact Section -->
+        <section id="contact-section" class="pb-16 lg:pb-24">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 max-w-7xl mx-auto">
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-3">
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 p-8 lg:p-10">
+                            <div class="mb-8">
+                                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                                    Envoyez-nous un message
+                                </h2>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg">
+                                    Remplissez le formulaire ci-dessous et nous vous recontacterons dans les plus brefs
+                                    délais avec une proposition personnalisée.
+                                </p>
+                            </div>
+
+                            <form id="contactForm" class="space-y-6" novalidate>
+                                <!-- Messages de statut -->
+                                <div id="formStatus" class="hidden p-4 rounded-xl border-2"></div>
+
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="name"
+                                            class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                            <span class="text-red-500">*</span>
+                                        </label>
+                                        <input type="text" id="name" name="name" required
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            placeholder="Votre nom complet" aria-describedby="name-error">
+                                        <div id="name-error" class="hidden text-red-500 text-sm mt-1"></div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="email"
+                                            class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                            <span class="text-red-500">*</span>
+                                        </label>
+                                        <input type="email" id="email" name="email" required
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            placeholder="votre@email.com" aria-describedby="email-error">
+                                        <div id="email-error" class="hidden text-red-500 text-sm mt-1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="phone"
+                                            class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+
+                                        </label>
+                                        <input type="tel" id="phone" name="phone"
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            placeholder="+33 666 197 344">
+                                        <div id="phone-error" class="hidden text-red-500 text-sm mt-1"></div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="service"
+                                            class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                            <span class="text-red-500">*</span>
+                                        </label>
+                                        <select id="service" name="service" required
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200">
+                                            <option value="">Sélectionnez un service</option>
+                                            <option value="UX/UI Design">UX/UI Design</option>
+                                            <option value="Développement Web">Développement Web</option>
+                                            <option value="Applications Mobiles">Applications Mobiles</option>
+                                            <option value="E-commerce">E-commerce</option>
+                                            <option value="Conseil & Stratégie">Conseil & Stratégie</option>
+                                            <option value="Formation">Formation</option>
+                                            <option value="Autre">Autre</option>
+                                        </select>
+                                        <div id="service-error" class="hidden text-red-500 text-sm mt-1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <textarea id="message" name="message" rows="5" required
+                                        class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white resize-none transition-all duration-200 placeholder-gray-400"
+                                        placeholder="Décrivez votre projet, vos objectifs, vos attentes et tout élément important à prendre en compte..."></textarea>
+                                    <div class="flex justify-between items-center">
+                                        <div id="message-error" class="hidden text-red-500 text-sm mt-1"></div>
+                                        <div class="text-sm text-gray-500 dark:text-gray-400 ml-auto">
+                                            <span id="message-count">0</span>/2000 caractères
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <button type="submit" id="submitBtn"
+                                    class="w-full bg-main-color hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none disabled:shadow-none">
+                                    <span id="btnText">
+                                        <ion-icon name="send-outline" class="mr-3 text-lg"></ion-icon>
+                                        Envoyer ma demande
+                                    </span>
+                                    <span id="btnLoading" class="hidden">
+                                        <ion-icon name="refresh-outline" class="mr-3 text-lg animate-spin"></ion-icon>
+                                        Envoi en cours...
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information Sidebar -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <!-- Contact Details -->
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                                Nos coordonnées
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-main-bg-color p-3 rounded-xl">
+                                        <ion-icon name="mail-outline" class="text-main-color text-xl"></ion-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
+                                        <a href="mailto:contact@lumiatechnologie.com"
+                                            class="text-main-color hover:underline font-medium">
+                                            contact@lumiatechnologie.com
+                                        </a>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Réponse garantie sous
+                                            24h</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-main-bg-color bg-opacity-20 p-3 rounded-xl">
+                                        <ion-icon name="call-outline" class="text-main-color text-xl"></ion-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Téléphone</h4>
+                                        <a href="tel:+33666197344" class="text-main-color hover:underline font-medium">
+                                            +33 666 197 344
+                                        </a>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Lundi - Vendredi : 9h00
+                                            - 18h00</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-main-bg-color p-3 rounded-xl">
+                                        <ion-icon name="location-outline" class="text-main-color text-xl"></ion-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Localisation</h4>
+                                        <p class="text-gray-600 dark:text-gray-300">France - Saint-Étienne</p>
+                                        <p class="text-gray-600 dark:text-gray-300">Maroc - Casablanca</p>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Développement à
+                                            distance et sur site</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                                Suivez-nous
+                            </h3>
+                            <div class="grid grid-cols-3 gap-4 mb-6">
+                                <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Facebook"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
+                                    <ion-icon name="logo-facebook" class="text-xl"></ion-icon>
+                                </a>
+                                <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg=="
+                                    target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                                    class="bg-pink-600 hover:bg-pink-700 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
+                                    <ion-icon name="logo-instagram" class="text-xl"></ion-icon>
+                                </a>
+                                <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="LinkedIn"
+                                    class="bg-blue-700 hover:bg-blue-800 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
+                                    <ion-icon name="logo-linkedin" class="text-xl"></ion-icon>
+                                </a>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">
+                                Restez connecté pour découvrir nos derniers projets et actualités technologiques.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq-section" class="py-16 bg-gray-50 dark:bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <div
+                            class="inline-flex items-center px-4 py-2 bg-main-bg-color text-main-color rounded-full text-sm font-medium mb-4">
+                            <ion-icon name="help-circle-outline" class="mr-2"></ion-icon>
+                            Questions fréquentes
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                            Vous avez des questions ?
+                        </h2>
+                        <p class="text-xl text-gray-600 dark:text-gray-300">
+                            Trouvez rapidement les réponses à vos questions les plus courantes.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <ion-icon name="time-outline" class="text-main-color mr-3"></ion-icon>
+                                Combien de temps prend un projet ?
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                La durée varie selon la complexité du projet. Un site vitrine prend 2-4 semaines, une
+                                application complexe peut prendre 3-6 mois.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <ion-icon name="shield-outline" class="text-main-color mr-3"></ion-icon>
+                                Proposez-vous de la maintenance ?
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Oui, nous offrons des contrats de maintenance pour assurer la sécurité et les mises à
+                                jour de vos solutions digitales.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <ion-icon name="bulb-outline" class="text-main-color mr-3"></ion-icon>
+                                Travaillez-vous avec des startups ?
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Absolument ! Nous accompagnons les startups de l'idée au MVP avec des solutions adaptées
+                                à leurs besoins et budget.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <ion-icon name="card-outline" class="text-main-color mr-3"></ion-icon>
+                                Quels sont vos tarifs ?
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Nos tarifs sont personnalisés selon votre projet. Contactez-nous pour un devis gratuit
+                                et personnalisé.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <ion-icon name="globe-outline" class="text-main-color mr-3"></ion-icon>
+                                Travaillez-vous à distance ?
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Oui, nous sommes spécialisés dans le développement à distance et collaborons
+                                efficacement avec des clients du monde entier.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <ion-icon name="trending-up-outline" class="text-main-color mr-3"></ion-icon>
+                                Quelles technologies utilisez-vous ?
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Nous maîtrisons les dernières technologies : React, Node.js, Python, Laravel, et bien
+                                plus encore selon vos besoins.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-dark-box">
+        <div class="container">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-between gap-10 sm:gap-y-15 py-15 tb:pt-25">
+                <div class="social ">
+                    <img src="images/logo/logo.webp" alt="" class="logo w-[200px] tb:w-[300px]">
+                    <p class="max-w-[300px] mb-8">Votre partenaire de confiance pour des créations digitales innovantes
+                        et sur mesure. Transformons ensemble vos idées en réalité.</p>
+                    <div class="flex items-center gap-x-5">
+                        <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" class="mb-3">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="links">
+                    <h4>Liens utiles</h4>
+                    <a href="contact.html">Contact</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="index.html">Services</a>
+                    <a href="index.html">Á propos de nous</a>
+                </div>
+                <div class="services links">
+                    <h4>Services</h4>
+                    <a href="#services">UX/UI Design</a>
+                    <a href="#services">Développement Web</a>
+                    <a href="#services">Applications Mobiles</a>
+                    <a href="#services">Stratégie Digitale</a>
+                </div>
+                <div class="coordonnées links">
+                    <h4>Nos coordonnées</h4>
+                    <a href="mailto:contact@lumiatechnologie.com" class="truncate">contact@lumiatechnologie.com</a>
+                    <a href="tel:+33666197344">+33 666 197 344</a>
+                    <address class="my-3">
+                        <a href="https://maps.app.goo.gl/TZRLUsqYD6JWbrCa6" target="_blank"
+                            rel="noopener noreferrer">France - Saint-Étienne</a>
+                    </address>
+                    <address>Maroc - Casablanca</address>
+                </div>
+            </div>
+            <div
+                class="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] dark:via-[#959CB183] to-transparent">
+            </div>
+            <div class="credits flex-center max-tb:flex-col gap-2 w-full py-8 max-[360px]:text-[14px]">
+                <div class="flex">
+                    <p>© 2025 LUMIA TECHNOLOGIE. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/contact script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- GSAP Animations -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Hero Animation
+            const heroTL = gsap.timeline();
+            heroTL
+                .fromTo("#contact-hero .inline-flex",
+                    { y: 20, opacity: 0, filter: "blur(5px)" },
+                    { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.out" }
+                )
+                .fromTo("#contact-hero h2",
+                    { y: 50, opacity: 0, filter: "blur(20px)" },
+                    { y: 0, opacity: 1, filter: "blur(0px)", duration: 1.2, ease: "power4.out" },
+                    "-=0.6"
+                )
+                .fromTo("#contact-hero p",
+                    { y: 30, opacity: 0, filter: "blur(10px)" },
+                    { y: 0, opacity: 1, filter: "blur(0px)", duration: 1, ease: "power3.out" },
+                    "-=0.8"
+                );
+
+            // Contact Form & Sidebar Animation
+            gsap.fromTo("#contact-section .lg\\:col-span-3, #contact-section .lg\\:col-span-2",
+                { y: 50, opacity: 0, filter: "blur(10px)" },
+                {
+                    scrollTrigger: { trigger: "#contact-section", start: "top 75%" },
+                    y: 0, opacity: 1, filter: "blur(0px)", duration: 1, stagger: 0.2, ease: "power3.out"
+                }
+            );
+
+            // FAQ Items Animation
+            gsap.fromTo("#faq-section .grid > div", // Target the FAQ item cards
+                { y: 40, opacity: 0, filter: "blur(5px)", scale: 0.95 },
+                {
+                    scrollTrigger: { trigger: "#faq-section", start: "top 75%" },
+                    y: 0, opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.8, stagger: 0.1, ease: "back.out(1.2)"
+                }
+            );
+
+            // Footer Animation (Simple Fade)
+            gsap.fromTo("footer .container",
+                { opacity: 0, y: 30 },
+                {
+                    scrollTrigger: { trigger: "footer", start: "top 90%" },
+                    opacity: 1, y: 0, duration: 1, ease: "power2.out"
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

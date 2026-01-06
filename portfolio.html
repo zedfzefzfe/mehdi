@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/output.css">
+  <link rel="stylesheet" href="CSS/portfolio.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+  <link rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css">
+  <link rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-chubby/css/uicons-regular-chubby.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+  <title>LUMIATECH</title>
+</head>
+
+<body class="relative dark:bg-[#101217] bg-page-color text-black dark:text-[#ffffffb3] dark duration-150">
+  <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden">
+  </div>
+  <div
+    class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color text-white">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </div>
+  <header class="fixed w-full top-0 left-0 duration-80 z-9999">
+    <div class="container py-5 flex items-center justify-between duration-80 text-[16px]">
+      <a href="index.html" aria-label="Home" class="w-30 sm:w-40 lg:w-43">
+        <img class="logo w-full" src="images/logo/logo.webp" alt="">
+      </a>
+      <nav
+        class="z-999 py-4 duration-350 max-lg:flex max-lg:flex-col max-lg:justify-between max-lg:absolute max-lg:-left-full max-lg:top-0 max-lg:w-[70%] max-lg:h-screen max-lg:px-6 max-lg:py-10 max-lg:shadow-md max-lg:dark:bg-dark-alt-color max-lg:bg-gray-200">
+        <div class="nav flex items-center space-x-8 xl:space-x-12 max-lg:space-y-5 max-lg:flex-col max-lg:items-start">
+          <img class="logo w-[150px] mb-20 ml-6 lg:hidden" src="images/logo/logo.webp" alt="">
+          <a href="index.html#home">Accueil</a>
+          <a href="index.html#about">Á propos de nous</a>
+          <a href="index.html#services">Services</a>
+          <a class="active" href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="menu-icons flex-center gap-x-6 border-t border-main-text/70 pt-8 lg:hidden">
+          <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </div>
+      </nav>
+      <div class="icons flex-center tb:gap-x-6">
+        <i
+          class="fi fi-rr-menu-burger text-2xl translate-y-1 tb:translate-y-[1.55px] cursor-pointer burger min-[1200px]:hidden"></i>
+        <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank"
+          rel="noopener noreferrer" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="portfolio-hero">
+    <div class="hero-inner">
+
+      <span class="hero-eyebrow">Selected Work</span>
+
+      <h1 class="hero-title">
+        We design & build<br>
+        digital products<br>
+        that <span>perform</span>.
+      </h1>
+
+      <p class="hero-description">
+        Strategy, design and engineering for ambitious brands and institutions
+        worldwide.
+      </p>
+
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="line"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Overlay for expanded card -->
+  <div class="portfolio-overlay"></div>
+
+  <!-- Project Details Modal -->
+  <div class="project-modal" id="projectModal">
+    <div class="pm-content">
+      <div class="pm-close">&times;</div>
+      <div class="pm-media">
+        <img src="" alt="" id="pmImage">
+      </div>
+      <div class="pm-details">
+        <span
+          style="color: #60a5fa; letter-spacing: 0.1em; text-transform: uppercase; font-size: 12px; font-weight: 600; display: block; margin-bottom: 16px;"
+          id="pmCategory">Category</span>
+        <h2 style="font-size: 32px; font-weight: 700; line-height: 1.1; margin-bottom: 24px; color: white;"
+          id="pmTitle">Project Title</h2>
+        <div id="pmDescription" class="text-gray-400 leading-relaxed mb-8">
+          <!-- Content injected via JS -->
+        </div>
+        <a href="#" id="pmLink"
+          class="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition"
+          style="width: fit-content;" target="_blank" rel="noopener noreferrer">
+          View Live Project
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="portfolio-distribution">
+    <div class="container distribution-grid">
+
+      <article class="dist-card" id="card-1" data-link="https://drmekouarmounia.com">
+        <div class="dist-card-inner">
+          <div class="dist-media">
+            <img src="images/logo/Dr.Mekouar Mounia.webp" alt="Dr Mekouar Mounia">
+          </div>
+          <div class="dist-info">
+            <span>Site Vitrine</span>
+            <h3>Dr Mekouar Mounia</h3>
+          </div>
+          <div class="dist-details">
+            <p class="text-gray-400 leading-relaxed mb-6">Site vitrine professionnelle offrant des prestations en
+              chirurgie dentaire à Casablanca.</p>
+            <ul class="flex flex-wrap gap-2 mt-4">
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                HTML</li>
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                CSS</li>
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                jquery</li>
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                php</li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="dist-card" id="card-2" data-link="https://chamanegocetools.ma">
+        <div class="dist-card-inner">
+          <div class="dist-media">
+            <img src="images/logo/Chama Negoce.webp" alt="Chama Negoce">
+          </div>
+          <div class="dist-info">
+            <span>E-Commerce</span>
+            <h3>Chama Negoce</h3>
+          </div>
+          <div class="dist-details">
+            <p class="text-gray-400 leading-relaxed mb-6">Boutique en ligne d'outillage professionnel, proposant des
+              outils, consommables et équipements pour bricolage et industrie.</p>
+            <ul class="flex flex-wrap gap-2 mt-4">
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                wordpress</li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="dist-card" id="card-3" data-link="https://wbdsplc.com">
+        <div class="dist-card-inner">
+          <div class="dist-media">
+            <img src="images/logo/WBDS Auto.webp" alt="WBDS">
+          </div>
+          <div class="dist-info">
+            <span>Automatisation</span>
+            <h3>WBDS</h3>
+          </div>
+          <div class="dist-details">
+            <p class="text-gray-400 leading-relaxed mb-6">Site B2B d'automatisation industrielle, mettant en avant une
+              large gamme de pièces détachées et de solutions pour les industriels.</p>
+            <ul class="flex flex-wrap gap-2 mt-4">
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                wordpress</li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="dist-card" id="card-4" data-link="https://dar-elotmani.com">
+        <div class="dist-card-inner">
+          <div class="dist-media">
+            <img src="images/logo/Dar Elotmani.webp" alt="DAR ELOTMANI">
+          </div>
+          <div class="dist-info">
+            <span>Tourisme</span>
+            <h3>DAR ELOTMANI</h3>
+          </div>
+          <div class="dist-details">
+            <p class="text-gray-400 leading-relaxed mb-6">Vitrine digitale pour un groupe de logements touristiques
+              (riads et appartements) à Marrakech.</p>
+            <ul class="flex flex-wrap gap-2 mt-4">
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                wordpress</li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="dist-card" id="card-5" data-link="#">
+        <div class="dist-card-inner">
+          <div class="dist-media">
+            <img src="images/logo/Syndexpress.webp" alt="SYNDEXPRESS">
+          </div>
+          <div class="dist-info">
+            <span>SaaS</span>
+            <h3>SYNDEXPRESS</h3>
+          </div>
+          <div class="dist-details">
+            <p class="text-gray-400 leading-relaxed mb-6">Mise en ligne du MVP de cette solution SaaS dédiée à la
+              gestion syndicale moderne au Maroc.</p>
+            <ul class="flex flex-wrap gap-2 mt-4">
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                react</li>
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                react native</li>
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                springboot</li>
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                aws</li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="dist-card" id="card-6" data-link="https://leanit-services.com">
+        <div class="dist-card-inner">
+          <div class="dist-media">
+            <img src="images/logo/Learn It Services.webp" alt="LEANIT-SERVICES">
+          </div>
+          <div class="dist-info">
+            <span>IT/BPO</span>
+            <h3>LEANIT-SERVICES</h3>
+          </div>
+          <div class="dist-details">
+            <p class="text-gray-400 leading-relaxed mb-6">Site vitrine d'une agence IT/BPO marocaine, présentant leurs
+              services de développement, migration, et support technique.</p>
+            <ul class="flex flex-wrap gap-2 mt-4">
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                wordpress</li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="dist-card" id="card-7" data-link="https://lighthouse-lawfirm.com">
+        <div class="dist-card-inner">
+          <div class="dist-media">
+            <img src="images/logo/Lighthouse Law Firm.webp" alt="LIGHTHOUSE LAW FIRM">
+          </div>
+          <div class="dist-info">
+            <span>Droit</span>
+            <h3>LIGHTHOUSE LAW FIRM</h3>
+          </div>
+          <div class="dist-details">
+            <p class="text-gray-400 leading-relaxed mb-6">Réalisation d'un site professionnel au design sobre et
+              responsive, optimisé pour l'accessibilité et le référencement.</p>
+            <ul class="flex flex-wrap gap-2 mt-4">
+              <li
+                class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs uppercase tracking-wider text-gray-300">
+                wordpress</li>
+            </ul>
+
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="results-section">
+    <div class="container">
+
+      <div class="results-header">
+        <span class="results-eyebrow">Our impact</span>
+        <h2>
+          Results that<br>
+          <span>move businesses</span>
+        </h2>
+        <p>
+          We don’t just design beautiful interfaces — we deliver measurable
+          outcomes that drive growth, trust, and performance.
+        </p>
+      </div>
+
+      <div class="results-grid">
+
+        <div class="result-card">
+          <span class="result-number" data-count="120">0</span>
+          <span class="result-suffix">+</span>
+          <p>Projects delivered</p>
+        </div>
+
+        <div class="result-card">
+          <span class="result-number" data-count="98">0</span>
+          <span class="result-suffix">%</span>
+          <p>Client satisfaction</p>
+        </div>
+
+        <div class="result-card">
+          <span class="result-number" data-count="6">0</span>
+          <span class="result-suffix">+</span>
+          <p>Years of experience</p>
+        </div>
+
+        <div class="result-card">
+          <span class="result-number" data-count="20">0</span>
+          <span class="result-suffix">+</span>
+          <p>Trusted partners</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-white dark:bg-dark-page-color">
+    <div class="container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-between gap-10 sm:gap-y-15 py-15 tb:pt-25">
+        <div class="social ">
+          <img src="images/logo/logo.webp" alt="" class="logo w-[200px] tb:w-[300px]">
+          <p class="max-w-[300px] mb-8">Votre partenaire de confiance pour des créations digitales innovantes et sur
+            mesure. Transformons ensemble vos idées en réalité.</p>
+          <div class="flex items-center gap-x-5">
+            <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn" class="mb-3">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </div>
+        </div>
+        <div class="links">
+          <h4>Liens utiles</h4>
+          <a href="contact.html">Contact</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="index.html">Services</a>
+          <a href="index.html">Á propos de nous</a>
+        </div>
+        <div class="services links">
+          <h4>Services</h4>
+          <a href="#services">UX/UI Design</a>
+          <a href="#services">Développement Web</a>
+          <a href="#services">Applications Mobiles</a>
+          <a href="#services">Stratégie Digitale</a>
+        </div>
+        <div class="coordonnées links">
+          <h4>Nos coordonnées</h4>
+          <a href="mailto:contact@lumiatechnologie.com" class="truncate">contact@lumiatechnologie.com</a>
+          <a href="tel:+33666197344">+33 666 197 344</a>
+          <address class="my-3">
+            <a href="https://maps.app.goo.gl/TZRLUsqYD6JWbrCa6" target="_blank" rel="noopener noreferrer">France -
+              Saint-Étienne</a>
+          </address>
+          <address>Maroc - Casablanca</address>
+        </div>
+      </div>
+      <div class="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] dark:via-[#959CB183] to-transparent">
+      </div>
+      <div class="credits flex-center max-tb:flex-col gap-2 w-full py-8 max-[360px]:text-[14px]">
+        <div class="flex">
+          <p>© 2025 LUMIA TECHNOLOGIE. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="JS/portfolio script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/Flip.min.js"></script>
+
+
+  <script>
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const heroTL = gsap.timeline();
+
+    heroTL
+      .from(".hero-eyebrow", {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      })
+      .from(".hero-title", {
+        y: 80,
+        opacity: 0,
+        duration: 1.6,
+        ease: "power4.out"
+      }, "-=0.4")
+      .from(".hero-description", {
+        y: 30,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out"
+      }, "-=0.6")
+      .from(".hero-scroll", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out"
+      }, "-=0.4");
+
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger, Flip);
+
+    // 3D Tilt Effect
+    const cards = document.querySelectorAll(".dist-card");
+
+    cards.forEach(card => {
+      const inner = card.querySelector(".dist-card-inner");
+
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const xPct = (x / rect.width - 0.5) * 2;
+        const yPct = (y / rect.height - 0.5) * 2;
+
+        gsap.to(inner, {
+          rotationY: xPct * 8,
+          rotationX: -yPct * 8,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
+
+      card.addEventListener("mouseleave", () => {
+        gsap.to(inner, {
+          rotationY: 0,
+          rotationX: 0,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
+    });
+
+    // --- GOD TIER MODAL LOGIC (FLIP + BACKGROUND SCALE) ---
+    const modal = document.querySelector("#projectModal");
+    const pmContent = document.querySelector(".pm-content");
+    const pmImage = document.querySelector("#pmImage");
+    const pmCategory = document.querySelector("#pmCategory");
+    const pmTitle = document.querySelector("#pmTitle");
+    const pmDescription = document.querySelector("#pmDescription");
+    const pmClose = document.querySelector(".pm-close");
+    const pmMedia = document.querySelector(".pm-media");
+    const pmLink = document.querySelector("#pmLink");
+
+    // Elements to scale down in background
+    const bgElements = document.querySelectorAll("header, section, footer");
+
+    let currentCard = null;
+
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        currentCard = card;
+        const cardImage = card.querySelector(".dist-media img");
+        const category = card.querySelector(".dist-info span").innerText;
+        const title = card.querySelector(".dist-info h3").innerText;
+        const detailsBlock = card.querySelector(".dist-details");
+
+        // 1. Populate data
+        pmCategory.innerText = category;
+        pmTitle.innerText = title;
+        pmDescription.innerHTML = detailsBlock ? ((detailsBlock.querySelector("p")?.outerHTML || "") + (detailsBlock.querySelector("ul")?.outerHTML || "")) : "Details coming soon...";
+        pmImage.src = cardImage.src;
+        pmLink.href = card.getAttribute("data-link") || "#";
+
+        // 2. Flip Initialization
+        // Capture initial state of the card image
+        const state = Flip.getState(cardImage);
+
+        // 3. Prepare Modal
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+
+        // Place the modal image where the card image was
+        Flip.from(state, {
+          duration: 0.8,
+          ease: "expo.inOut",
+          targets: pmImage,
+          scale: true
+        });
+
+        // 4. Background Scale & Modal Reveal Timeline
+        const tl = gsap.timeline();
+
+        tl.to(bgElements, {
+          scale: 0.96,
+          filter: "blur(15px)",
+          opacity: 0.5,
+          duration: 1,
+          ease: "expo.inOut"
+        }, 0);
+
+        tl.fromTo(pmContent, {
+          y: 100,
+          opacity: 0,
+          rotateX: -15
+        }, {
+          y: 0,
+          opacity: 1,
+          rotateX: 0,
+          duration: 1,
+          ease: "expo.out"
+        }, 0.2);
+
+        // Staggered text reveals
+        tl.fromTo([pmCategory, pmTitle, pmDescription, ".pm-details a"], {
+          y: 40,
+          opacity: 0
+        }, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power4.out"
+        }, 0.5);
+      });
+    });
+
+    const closeModal = () => {
+      if (!currentCard) return;
+
+      const cardImage = currentCard.querySelector(".dist-media img");
+      const state = Flip.getState(pmImage);
+
+      const tl = gsap.timeline({
+        onComplete: () => {
+          modal.classList.remove("open");
+          document.body.style.overflow = "";
+          currentCard = null;
+        }
+      });
+
+      tl.to([pmCategory, pmTitle, pmDescription, ".pm-details a"], {
+        y: 20,
+        opacity: 0,
+        duration: 0.4,
+        ease: "power2.in"
+      }, 0);
+
+      tl.to(pmContent, {
+        y: 60,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.in"
+      }, 0.1);
+
+      tl.to(bgElements, {
+        scale: 1,
+        filter: "blur(0px)",
+        opacity: 1,
+        duration: 0.8,
+        ease: "expo.inOut"
+      }, 0.2);
+    };
+
+    pmClose.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Initial Entry Animation
+    // --- CINEMATIC LIST LOGIC ---
+    const revealContainer = document.querySelector(".hover-reveal");
+    const revealImg = document.querySelector(".reveal-img");
+    const projectItems = document.querySelectorAll(".project-item");
+
+    // Mouse Tracking state
+    let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let current = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+    // Update target mouse position
+    window.addEventListener("mousemove", (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    // Lerp loop for smooth following
+    const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+    const animateReveal = () => {
+      current.x = lerp(current.x, mouse.x, 0.1);
+      current.y = lerp(current.y, mouse.y, 0.1);
+
+      if (revealContainer) {
+        revealContainer.style.transform = `translate(${current.x - 225}px, ${current.y - 160}px) rotate(${(mouse.x - current.x) * 0.05}deg)`;
+      }
+
+      if (revealImg) {
+        revealImg.style.transform = `scale(1.2) translate(${(current.x - mouse.x) * 0.05}px, ${(current.y - mouse.y) * 0.05}px)`;
+      }
+
+      requestAnimationFrame(animateReveal);
+    };
+    animateReveal();
+
+    // Hover logic
+    projectItems.forEach(item => {
+      item.addEventListener("mouseenter", () => {
+        // Swap Image
+        const imgSrc = item.getAttribute("data-img");
+        if (revealImg.src !== imgSrc) {
+          revealImg.src = imgSrc;
+
+          // Kinetic Burst on swap
+          const turbulence = document.querySelector("#liquidFilter feTurbulence");
+          const displacement = document.querySelector("#liquidFilter feDisplacementMap");
+
+          gsap.fromTo(displacement, { scale: 50 }, { scale: 0, duration: 0.8, ease: "power2.out" });
+        }
+
+        // Show Reveal
+        revealContainer.classList.add("active");
+        revealContainer.style.opacity = 1;
+      });
+
+      item.addEventListener("mouseleave", () => {
+        revealContainer.classList.remove("active");
+        revealContainer.style.opacity = 0;
+      });
+    });
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Intro
+    gsap.from(".partners-header h2", {
+      y: 40,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".partners-cinematic",
+        start: "top 80%"
+      }
+    });
+
+    gsap.from(".partners-header p", {
+      y: 20,
+      opacity: 0,
+      duration: 1,
+      delay: .1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".partners-cinematic",
+        start: "top 80%"
+      }
+    });
+
+    // Infinite cinematic drift
+    gsap.to(".row-1", {
+      x: "-=300",
+      duration: 40,
+      ease: "none",
+      repeat: -1
+    });
+
+    gsap.to(".row-2", {
+      x: "+=300",
+      duration: 50,
+      ease: "none",
+      repeat: -1
+    });
+
+    gsap.to(".row-3", {
+      x: "-=300",
+      duration: 45,
+      ease: "none",
+      repeat: -1
+    });
+
+    // Scroll depth
+    gsap.to(".partners-stage", {
+      y: -80,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".partners-cinematic",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1
+      }
+    });
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Cards Entrance Animation
+    gsap.from(".dist-card", {
+      y: 100,
+      opacity: 0,
+      filter: "blur(10px)",
+      duration: 1.2,
+      stagger: 0.15,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".portfolio-distribution",
+        start: "top 80%"
+      }
+    });
+
+    document.querySelectorAll(".result-number").forEach(number => {
+      const target = +number.dataset.count;
+
+      gsap.fromTo(number,
+        { innerText: 0 },
+        {
+          innerText: target,
+          duration: 2,
+          ease: "power3.out",
+          snap: { innerText: 1 },
+          scrollTrigger: {
+            trigger: ".results-section",
+            start: "top 70%",
+            once: true
+          }
+        }
+      );
+    });
+  </script>
+
+
+
+</body>
+
+</html>
