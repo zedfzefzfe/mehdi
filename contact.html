@@ -25,6 +25,10 @@
         rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
     <style>
+        :root {
+            color-scheme: light dark;
+        }
+
         .contact-hero-orbs span {
             position: absolute;
             border-radius: 9999px;
@@ -58,17 +62,42 @@
             }
         }
 
+        .contact-hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.12), transparent 35%),
+                radial-gradient(circle at 80% 10%, rgba(236, 72, 153, 0.1), transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(14, 165, 233, 0.12), transparent 40%),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent 65%);
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent);
+        }
+
+        .dark .contact-hero-grid {
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.18), transparent 35%),
+                radial-gradient(circle at 80% 10%, rgba(236, 72, 153, 0.16), transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(14, 165, 233, 0.16), transparent 40%),
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.95), transparent 60%);
+        }
+
         .contact-glass {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.86));
             backdrop-filter: blur(16px);
             border: 1px solid rgba(148, 163, 184, 0.2);
             box-shadow: 0 30px 80px -50px rgba(15, 23, 42, 0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         .dark .contact-glass {
             background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.86));
             border-color: rgba(148, 163, 184, 0.2);
             box-shadow: 0 30px 80px -50px rgba(15, 23, 42, 0.7);
+        }
+
+        .contact-glass:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 40px 80px -45px rgba(15, 23, 42, 0.5);
         }
 
         .contact-glow {
@@ -109,16 +138,83 @@
             }
         }
 
+        .contact-cta {
+            background: linear-gradient(135deg, #2563eb, #7c3aed 55%, #0ea5e9);
+            box-shadow: 0 20px 40px -20px rgba(37, 99, 235, 0.6);
+        }
+
+        .contact-cta:hover {
+            box-shadow: 0 25px 50px -20px rgba(37, 99, 235, 0.65);
+        }
+
+        .contact-field {
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.75));
+            box-shadow: 0 12px 20px -18px rgba(15, 23, 42, 0.4);
+        }
+
+        .dark .contact-field {
+            background-image: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+        }
+
+        .contact-pill {
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(14px);
+        }
+
+        .dark .contact-pill {
+            background: rgba(30, 41, 59, 0.85);
+            border-color: rgba(148, 163, 184, 0.2);
+        }
+
         .contact-stat {
             border: 1px solid rgba(148, 163, 184, 0.2);
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(14px);
             box-shadow: 0 20px 40px -30px rgba(15, 23, 42, 0.4);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
 
         .dark .contact-stat {
             background: rgba(30, 41, 59, 0.85);
             border-color: rgba(148, 163, 184, 0.2);
+        }
+
+        .contact-stat:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 30px 50px -35px rgba(15, 23, 42, 0.45);
+        }
+
+        .contact-process {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .contact-process-card {
+            border-radius: 18px;
+            padding: 1.25rem;
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
+            box-shadow: 0 25px 45px -35px rgba(15, 23, 42, 0.4);
+        }
+
+        .dark .contact-process-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.92));
+        }
+
+        .contact-float {
+            animation: float-slow 12s ease-in-out infinite;
+        }
+
+        @keyframes float-slow {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
         }
     </style>
     <title>LUMIATECH</title>
@@ -187,6 +283,7 @@
     <!-- Hero Section -->
     <main
         class="overflow-hidden p-0! pt-24! relative min-h-screen max-[575px]:pt-[150px]! bg-linear-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div class="contact-hero-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
         <div class="contact-hero-orbs pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
             <span class="top-10 left-[-80px] h-60 w-60 bg-blue-300 opacity-50"></span>
             <span class="top-32 right-[-60px] h-72 w-72 bg-violet-400 opacity-40"></span>
@@ -213,6 +310,18 @@
                         dans chaque étape de votre projet technologique.
                     </p>
 
+                    <div class="flex flex-wrap justify-center gap-4 mb-10">
+                        <span class="contact-pill text-sm font-semibold text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full">
+                            🚀 Réponse ultra-rapide
+                        </span>
+                        <span class="contact-pill text-sm font-semibold text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full">
+                            🔒 Confidentiel & sécurisé
+                        </span>
+                        <span class="contact-pill text-sm font-semibold text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full">
+                            💡 Conseil stratégique inclus
+                        </span>
+                    </div>
+
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
                         <div class="contact-stat rounded-2xl px-5 py-4">
                             <p class="text-sm uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">Disponibilité</p>
@@ -228,6 +337,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- Main Contact Section -->
@@ -238,7 +348,7 @@
                     <div class="lg:col-span-3 relative">
                         <div class="contact-glow"></div>
                         <div
-                            class="contact-glass rounded-2xl p-8 lg:p-10 relative">
+                            class="contact-glass rounded-2xl p-8 lg:p-10 relative contact-shine">
                             <div class="mb-8">
                                 <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                                     Envoyez-nous un message
@@ -260,7 +370,7 @@
                                             <span class="text-red-500">*</span>
                                         </label>
                                         <input type="text" id="name" name="name" required
-                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            class="contact-field w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
                                             placeholder="Votre nom complet" aria-describedby="name-error">
                                         <div id="name-error" class="hidden text-red-500 text-sm mt-1"></div>
                                     </div>
@@ -270,7 +380,7 @@
                                             <span class="text-red-500">*</span>
                                         </label>
                                         <input type="email" id="email" name="email" required
-                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            class="contact-field w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
                                             placeholder="votre@email.com" aria-describedby="email-error">
                                         <div id="email-error" class="hidden text-red-500 text-sm mt-1"></div>
                                     </div>
@@ -283,7 +393,7 @@
 
                                         </label>
                                         <input type="tel" id="phone" name="phone"
-                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            class="contact-field w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
                                             placeholder="+33 666 197 344">
                                         <div id="phone-error" class="hidden text-red-500 text-sm mt-1"></div>
                                     </div>
@@ -293,7 +403,7 @@
                                             <span class="text-red-500">*</span>
                                         </label>
                                         <select id="service" name="service" required
-                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200">
+                                            class="contact-field w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200">
                                             <option value="">Sélectionnez un service</option>
                                             <option value="UX/UI Design">UX/UI Design</option>
                                             <option value="Développement Web">Développement Web</option>
@@ -309,7 +419,7 @@
 
                                 <div class="space-y-2">
                                     <textarea id="message" name="message" rows="5" required
-                                        class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white resize-none transition-all duration-200 placeholder-gray-400"
+                                        class="contact-field w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white resize-none transition-all duration-200 placeholder-gray-400"
                                         placeholder="Décrivez votre projet, vos objectifs, vos attentes et tout élément important à prendre en compte..."></textarea>
                                     <div class="flex justify-between items-center">
                                         <div id="message-error" class="hidden text-red-500 text-sm mt-1"></div>
@@ -321,7 +431,7 @@
 
 
                                 <button type="submit" id="submitBtn"
-                                    class="w-full bg-main-color hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none disabled:shadow-none contact-shine">
+                                    class="contact-cta w-full disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center hover:-translate-y-0.5 disabled:transform-none disabled:shadow-none contact-shine">
                                     <span id="btnText">
                                         <ion-icon name="send-outline" class="mr-3 text-lg"></ion-icon>
                                         Envoyer ma demande
@@ -339,7 +449,7 @@
                     <div class="lg:col-span-2 space-y-6">
                         <!-- Contact Details -->
                         <div
-                            class="contact-glass rounded-2xl p-8 relative">
+                            class="contact-glass rounded-2xl p-8 relative contact-float">
                             <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                                 Nos coordonnées
                             </h3>
@@ -416,6 +526,30 @@
                             <p class="text-sm text-gray-600 dark:text-gray-300">
                                 Restez connecté pour découvrir nos derniers projets et actualités technologiques.
                             </p>
+                        </div>
+
+                        <div class="contact-process">
+                            <div class="contact-process-card">
+                                <p class="text-xs uppercase tracking-[0.28em] text-main-color font-semibold">Étape 01</p>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mt-2">Diagnostic express</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                                    Analyse rapide de votre besoin, vos enjeux et votre contexte métier.
+                                </p>
+                            </div>
+                            <div class="contact-process-card">
+                                <p class="text-xs uppercase tracking-[0.28em] text-main-color font-semibold">Étape 02</p>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mt-2">Proposition premium</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                                    Feuille de route claire, planning précis et budget transparent.
+                                </p>
+                            </div>
+                            <div class="contact-process-card">
+                                <p class="text-xs uppercase tracking-[0.28em] text-main-color font-semibold">Étape 03</p>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mt-2">Exécution maîtrisée</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                                    Lancement agile avec suivi et reporting hebdomadaire.
+                                </p>
+                            </div>
                         </div>
 
                         <div class="contact-glass rounded-2xl p-6">
@@ -624,6 +758,11 @@
                     { y: 30, opacity: 0, filter: "blur(10px)" },
                     { y: 0, opacity: 1, filter: "blur(0px)", duration: 1, ease: "power3.out" },
                     "-=0.8"
+                )
+                .fromTo("#contact-hero .contact-pill",
+                    { y: 20, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "power2.out" },
+                    "-=0.6"
                 );
 
             // Contact Form & Sidebar Animation
@@ -646,6 +785,14 @@
                 {
                     scrollTrigger: { trigger: "#faq-section", start: "top 75%" },
                     y: 0, opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.8, stagger: 0.1, ease: "back.out(1.2)"
+                }
+            );
+
+            gsap.fromTo(".contact-process-card",
+                { y: 40, opacity: 0, filter: "blur(6px)" },
+                {
+                    scrollTrigger: { trigger: ".contact-process", start: "top 80%" },
+                    y: 0, opacity: 1, filter: "blur(0px)", duration: 0.9, stagger: 0.15, ease: "power2.out"
                 }
             );
 
