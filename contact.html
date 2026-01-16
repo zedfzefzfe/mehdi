@@ -25,6 +25,85 @@
         rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
     <title>LUMIATECH</title>
+    <style>
+        .contact-orb {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(0px);
+            opacity: 0.6;
+            mix-blend-mode: screen;
+        }
+
+        .contact-orb.orb-1 {
+            width: 420px;
+            height: 420px;
+            top: -140px;
+            left: -120px;
+            background: radial-gradient(circle at 30% 30%, rgba(37, 99, 235, 0.55), rgba(37, 99, 235, 0));
+            animation: floatSlow 14s ease-in-out infinite;
+        }
+
+        .contact-orb.orb-2 {
+            width: 360px;
+            height: 360px;
+            bottom: -160px;
+            right: -80px;
+            background: radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.55), rgba(139, 92, 246, 0));
+            animation: floatSlow 16s ease-in-out infinite;
+        }
+
+        .contact-orb.orb-3 {
+            width: 260px;
+            height: 260px;
+            top: 32%;
+            right: 18%;
+            background: radial-gradient(circle at 30% 30%, rgba(251, 191, 36, 0.5), rgba(251, 191, 36, 0));
+            animation: floatSlow 18s ease-in-out infinite;
+        }
+
+        .contact-glow {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .contact-glow::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.45), rgba(124, 58, 237, 0.35), rgba(14, 165, 233, 0.4));
+            filter: blur(16px);
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .gradient-border {
+            border: 1px solid transparent;
+            background:
+                linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(14, 165, 233, 0.2), rgba(139, 92, 246, 0.8)) border-box;
+        }
+
+        .dark .gradient-border {
+            background:
+                linear-gradient(#1f2937, #1f2937) padding-box,
+                linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(14, 165, 233, 0.2), rgba(139, 92, 246, 0.9)) border-box;
+        }
+
+        @keyframes floatSlow {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            50% {
+                transform: translate3d(0, -24px, 0);
+            }
+
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    </style>
 </head>
 
 <body
@@ -90,26 +169,145 @@
     <!-- Hero Section -->
     <main
         class="overflow-hidden p-0! pt-24! relative min-h-screen max-[575px]:pt-[150px]! bg-linear-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="contact-orb orb-1"></div>
+            <div class="contact-orb orb-2"></div>
+            <div class="contact-orb orb-3"></div>
+        </div>
         <section id="contact-hero" class="flex-center flex-col pb-12 pt-16 md:pt-20 md:pb-20 xl:pt-24 xl:pb-24 w-full">
             <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto text-center">
-                    <div
-                        class="inline-flex items-center px-4 py-2 bg-main-bg-color text-main-color rounded-full text-sm font-medium mb-6">
-                        Discutons de votre projet
+                <div class="grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] items-center">
+                    <div class="text-center lg:text-left">
+                        <div
+                            class="hero-pill inline-flex items-center px-4 py-2 bg-main-bg-color text-main-color rounded-full text-sm font-medium mb-6">
+                            Discutons de votre projet
+                        </div>
+
+                        <h2
+                            class="hero-title mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold leading-tight!">
+                            Contactez notre <span
+                                class="bg-linear-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">équipe
+                                d'experts</span></h2>
+
+                        <p
+                            class="hero-subtitle text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Prêt à transformer votre vision en réalité digitale ? Notre équipe d'experts vous accompagne
+                            dans chaque étape de votre projet technologique.
+                        </p>
+
+                        <div class="grid sm:grid-cols-3 gap-4 mt-8">
+                            <div
+                                class="hero-stat gradient-border rounded-2xl p-4 shadow-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-main-bg-color text-main-color p-2 rounded-lg">
+                                        <ion-icon name="sparkles-outline" class="text-lg"></ion-icon>
+                                    </span>
+                                    <p class="font-semibold text-gray-900 dark:text-white">Projets sur-mesure</p>
+                                </div>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Des solutions taillées pour votre
+                                    croissance.</p>
+                            </div>
+                            <div
+                                class="hero-stat gradient-border rounded-2xl p-4 shadow-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-main-bg-color text-main-color p-2 rounded-lg">
+                                        <ion-icon name="flash-outline" class="text-lg"></ion-icon>
+                                    </span>
+                                    <p class="font-semibold text-gray-900 dark:text-white">Réponse 24h</p>
+                                </div>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Un premier retour rapide et
+                                    détaillé.</p>
+                            </div>
+                            <div
+                                class="hero-stat gradient-border rounded-2xl p-4 shadow-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-main-bg-color text-main-color p-2 rounded-lg">
+                                        <ion-icon name="shield-checkmark-outline" class="text-lg"></ion-icon>
+                                    </span>
+                                    <p class="font-semibold text-gray-900 dark:text-white">Suivi premium</p>
+                                </div>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Un accompagnement complet du brief
+                                    au lancement.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <h2
-                        class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold leading-tight!">
-                        Contactez notre <span
-                            class="bg-linear-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">équipe
-                            d'experts</span></h2>
+                    <div class="relative">
+                        <div
+                            class="hero-card contact-glow rounded-3xl bg-white/90 dark:bg-gray-900/80 p-8 shadow-2xl backdrop-blur-xl border border-white/40 dark:border-gray-700">
+                            <div class="flex items-center justify-between mb-6">
+                                <div>
+                                    <p class="text-sm uppercase tracking-[0.3em] text-main-color font-semibold">
+                                        LumiaTech Studio
+                                    </p>
+                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Une collaboration
+                                        fluide & inspirante</h3>
+                                </div>
+                                <span class="bg-main-bg-color text-main-color p-3 rounded-2xl">
+                                    <ion-icon name="rocket-outline" class="text-2xl"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-4">
+                                    <span class="bg-blue-100 text-blue-600 p-2 rounded-lg dark:bg-blue-500/20 dark:text-blue-200">
+                                        <ion-icon name="people-outline" class="text-lg"></ion-icon>
+                                    </span>
+                                    <div>
+                                        <p class="font-semibold text-gray-900 dark:text-white">Équipe pluridisciplinaire
+                                        </p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">Design, tech et stratégie
+                                            réunis dans une même équipe.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <span
+                                        class="bg-violet-100 text-violet-600 p-2 rounded-lg dark:bg-violet-500/20 dark:text-violet-200">
+                                        <ion-icon name="pulse-outline" class="text-lg"></ion-icon>
+                                    </span>
+                                    <div>
+                                        <p class="font-semibold text-gray-900 dark:text-white">Suivi en temps réel</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">Transparence totale sur
+                                            l'avancée de votre projet.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <span
+                                        class="bg-amber-100 text-amber-600 p-2 rounded-lg dark:bg-amber-500/20 dark:text-amber-200">
+                                        <ion-icon name="trophy-outline" class="text-lg"></ion-icon>
+                                    </span>
+                                    <div>
+                                        <p class="font-semibold text-gray-900 dark:text-white">Livrables premium</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">Des interfaces élégantes et
+                                            des performances optimisées.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <p
-                        class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                        Prêt à transformer votre vision en réalité digitale ? Notre équipe d'experts vous accompagne
-                        dans chaque étape de votre projet technologique.
-                    </p>
+                        <div
+                            class="hero-badge absolute -left-6 -top-6 bg-white/90 dark:bg-gray-900/80 backdrop-blur-xl shadow-xl rounded-2xl px-5 py-4 border border-white/50 dark:border-gray-700">
+                            <p class="text-xs uppercase tracking-[0.25em] text-gray-500 dark:text-gray-300">Disponibilité
+                            </p>
+                            <p class="text-lg font-semibold text-gray-900 dark:text-white">Créneaux ouverts cette semaine
+                            </p>
+                        </div>
+                        <div
+                            class="hero-badge absolute -bottom-6 right-6 bg-white/90 dark:bg-gray-900/80 backdrop-blur-xl shadow-xl rounded-2xl px-5 py-4 border border-white/50 dark:border-gray-700">
+                            <div class="flex items-center gap-3">
+                                <span class="bg-main-bg-color text-main-color p-2 rounded-lg">
+                                    <ion-icon name="calendar-outline" class="text-lg"></ion-icon>
+                                </span>
+                                <div>
+                                    <p class="text-xs uppercase tracking-[0.25em] text-gray-500 dark:text-gray-300">Kickoff
+                                        rapide</p>
+                                    <p class="text-lg font-semibold text-gray-900 dark:text-white">Démarrage en 7 jours
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </section>
 
         <!-- Main Contact Section -->
@@ -472,19 +670,34 @@
             // Hero Animation
             const heroTL = gsap.timeline();
             heroTL
-                .fromTo("#contact-hero .inline-flex",
+                .fromTo("#contact-hero .hero-pill",
                     { y: 20, opacity: 0, filter: "blur(5px)" },
                     { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.out" }
                 )
-                .fromTo("#contact-hero h2",
+                .fromTo("#contact-hero .hero-title",
                     { y: 50, opacity: 0, filter: "blur(20px)" },
                     { y: 0, opacity: 1, filter: "blur(0px)", duration: 1.2, ease: "power4.out" },
                     "-=0.6"
                 )
-                .fromTo("#contact-hero p",
+                .fromTo("#contact-hero .hero-subtitle",
                     { y: 30, opacity: 0, filter: "blur(10px)" },
                     { y: 0, opacity: 1, filter: "blur(0px)", duration: 1, ease: "power3.out" },
                     "-=0.8"
+                )
+                .fromTo("#contact-hero .hero-stat",
+                    { y: 30, opacity: 0, filter: "blur(10px)" },
+                    { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.8, stagger: 0.15, ease: "power3.out" },
+                    "-=0.6"
+                )
+                .fromTo("#contact-hero .hero-card",
+                    { y: 40, opacity: 0, scale: 0.98, filter: "blur(10px)" },
+                    { y: 0, opacity: 1, scale: 1, filter: "blur(0px)", duration: 1, ease: "power3.out" },
+                    "-=0.6"
+                )
+                .fromTo("#contact-hero .hero-badge",
+                    { y: 20, opacity: 0, scale: 0.95 },
+                    { y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.2, ease: "back.out(1.4)" },
+                    "-=0.6"
                 );
 
             // Contact Form & Sidebar Animation
